@@ -10,7 +10,7 @@ const db = knex({
 app.set('db', db);
 
 
-app.listen(10459, () => {
-    console.log(`Server available at http://localhost:10459`);
+app.listen(PORT, () => {
+    console.log(`Server available at http://localhost:${PORT}`);
 
 });

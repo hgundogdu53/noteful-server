@@ -22,7 +22,7 @@ app.use('/api/folders', foldersRouter);
 app.use('/api/notes', notesRouter);
 
 app.get('/', (req, res) => {
-    res.send('Hello, world!')
+    res.send('Hello, world!V2')
 });
 
 app.use(function errorHandler(error, req, res, next) {
