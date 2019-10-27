@@ -55,7 +55,10 @@ foldersRouter
                 res.folder = folder // save the folder for the next middleware
                 next() // don't forget to call next so the next middleware happens!
             })
-            .catch(next)
+            .catch(next => {
+                console.log('catch error folder service getbyid')
+                next()
+            })
     })
     .get((req, res, next) => {
         res.json(serializeFolder(res.folder))

@@ -2,7 +2,7 @@ const knex = require('knex');
 const app = require('./app');
 const { PORT, DATABASE_URL } = require('./config');
 
-console.log(PORT);
+
 console.log(DATABASE_URL);
 
 const db = knex({
