@@ -57,7 +57,7 @@ foldersRouter
             })
             .catch(next => {
                 console.log('catch error folder service getbyid')
-                next()
+
             })
     })
     .get((req, res, next) => {
