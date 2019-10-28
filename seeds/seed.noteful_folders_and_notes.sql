@@ -1,3 +1,10 @@
+INSERT INTO noteful_folders
+    (folder_name)
+VALUES
+    ('Folder 1'),
+    ('Folder 2'),
+    ('Folder 3');
+
 INSERT INTO noteful_notes
     (note_name, folder_id, content)
 VALUES
