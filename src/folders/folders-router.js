@@ -24,8 +24,8 @@ foldersRouter
             .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
-        const { name } = req.body
-        const newFolder = { name }
+        const { fodler_name } = req.body
+        const newFolder = { folder_name }
         FoldersService.insertFolder(
             req.app.get('db'),
             newFolder

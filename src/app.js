@@ -23,7 +23,7 @@ app.use('/api/notes', notesRouter);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello, world!V2')
+    res.send('Hello, world!V3')
 });
 
 app.use(function errorHandler(error, req, res, next) {
