@@ -22,7 +22,7 @@ notesRouter
             req.app.get('db')
         )
             .then(notes => {
-                res.json(notes)
+                res.json(notes.map(serializeNote));
             })
             .catch(next)
     })

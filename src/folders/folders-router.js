@@ -19,9 +19,9 @@ foldersRouter
             req.app.get('db')
         )
             .then(folders => {
-                res.json(folders)
+                res.json(folders.map(serializeFolder));
             })
-            .catch(next)
+            .catch(next);
     })
     .post(jsonParser, (req, res, next) => {
         const { folder_name } = req.body
@@ -34,7 +34,7 @@ foldersRouter
                 res
                     .status(201)
                     .location(path.posix.join(req.originalUrl, `/${folder.id}`))
-                    .json(folder)
+                    .json(serializeFolder(folder));
             })
             .catch(next)
     })
