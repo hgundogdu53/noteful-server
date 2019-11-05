@@ -36,7 +36,10 @@ foldersRouter
                     .location(path.posix.join(req.originalUrl, `/${folder.id}`))
                     .json(serializeFolder(folder));
             })
-            .catch(next)
+            .catch(err => {
+                console.log('error adding folder: ' + err);
+                next;
+            })
     })
 
 foldersRouter
