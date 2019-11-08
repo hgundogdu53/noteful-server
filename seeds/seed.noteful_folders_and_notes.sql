@@ -1,12 +1,12 @@
 INSERT INTO noteful_folders
-    (folder_name)
+    (name)
 VALUES
     ('Folder 1'),
     ('Folder 2'),
     ('Folder 3');
 
 INSERT INTO noteful_notes
-    (note_name, folder_id, content)
+    (name, folder_id, content)
 VALUES
     ('Dogs', 1, 'This is a note about dogs.'),
     ('Cats', 1, 'This is a note about cats.'),

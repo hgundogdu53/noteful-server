@@ -8,7 +8,7 @@ const jsonParser = express.json()
 
 const serializeFolder = folder => ({
     id: folder.id,
-    name: xss(folder.folder_name),
+    name: xss(folder.name),
     date_published: folder.date_published,
 })
 
@@ -24,8 +24,8 @@ foldersRouter
             .catch(next);
     })
     .post(jsonParser, (req, res, next) => {
-        const { folder_name } = req.body
-        const newFolder = { folder_name }
+        const { name } = req.body
+        const newFolder = { name }
         FoldersService.insertFolder(
             req.app.get('db'),
             newFolder
