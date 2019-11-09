@@ -51,11 +51,11 @@ notesRouter
     });
 
 notesRouter
-    .route('/:note_id')
+    .route('/:noteId')
     .all((req, res, next) => {
         NotesService.getNoteById(
             req.app.get('db'),
-            req.params.note_id
+            req.params.noteId
         )
             .then(note => {
                 if (!note) {
@@ -74,7 +74,7 @@ notesRouter
     .delete((req, res, next) => {
         NotesService.deleteNote(
             req.app.get('db'),
-            req.params.note_id
+            req.params.noteId
         )
             .then(numRowsAffected => {
                 res.status(204).end()
