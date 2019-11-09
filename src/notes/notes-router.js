@@ -95,7 +95,7 @@ notesRouter
 
         NotesService.updateNote(
             req.app.get('db'),
-            req.params.note_id,
+            req.params.noteId,
             noteToUpdate
         )
             .then(numRowsAffected => {
