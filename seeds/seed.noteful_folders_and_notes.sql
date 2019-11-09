@@ -6,7 +6,7 @@ VALUES
     ('Folder 3');
 
 INSERT INTO noteful_notes
-    (name, folder_id, content)
+    (name, folderId, content)
 VALUES
     ('Dogs', 1, 'This is a note about dogs.'),
     ('Cats', 1, 'This is a note about cats.'),
